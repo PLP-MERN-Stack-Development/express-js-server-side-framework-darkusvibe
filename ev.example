@@ -1,0 +1,113 @@
+{
+  "total": 5,
+  "page": 1,
+  "limit": 10,
+  "data": [
+    {
+      "id": "837bcd70-38d4-457b-aa54-6f37dc71842e",
+      "name": "Book A",
+      "description": "An inspiring novel about courage and hope.",
+      "price": 12.99,
+      "category": "Books",
+      "inStock": true
+    },
+    {
+      "id": "840573f9-a3dd-45a5-9f17-9e53ee6ee101",
+      "name": "Wireless Mouse",
+      "description": "Ergonomic wireless mouse with USB receiver.",
+      "price": 25.5,
+      "category": "Electronics",
+      "inStock": true
+    },
+    {
+      "id": "e44c6ed4-6e8a-4c48-a779-c59163151a10",
+      "name": "Coffee Mug",
+      "description": "Ceramic coffee mug, dishwasher safe.",
+      "price": 9.99,
+      "category": "Home",
+      "inStock": false
+    },
+    {
+      "id": "f3bda8ba-03ff-4028-96ca-fc96a48b8bfd",
+      "name": "Headphones",
+      "description": "Over-ear noise-cancelling headphones.",
+      "price": 79.99,
+      "category": "Electronics",
+      "inStock": true
+    },
+    {
+      "id": "469f9b38-3678-49bf-ad87-440a764e6ade",
+      "name": "Notebook",
+      "description": "A5 ruled notebook with soft cover.",
+      "price": 4.5,
+      "category": "Stationery",
+      "inStock": true
+    }
+  ]
+}
+{
+  "total": 5,
+  "page": 1,
+  "limit": 10,
+  "data": [
+    {
+      "id": "837bcd70-38d4-457b-aa54-6f37dc71842e",
+      "name": "Book A",
+      "description": "An inspiring novel about courage and hope.",
+      "price": 12.99,
+      "category": "Books",
+      "inStock": true
+    },
+    {
+      "id": "840573f9-a3dd-45a5-9f17-9e53ee6ee101",
+      "name": "Wireless Mouse",
+      "description": "Ergonomic wireless mouse with USB receiver.",
+      "price": 25.5,
+      "category": "Electronics",
+      "inStock": true
+    },
+    {
+      "id": "e44c6ed4-6e8a-4c48-a779-c59163151a10",
+      "name": "Coffee Mug",
+      "description": "Ceramic coffee mug, dishwasher safe.",
+      "price": 9.99,
+      "category": "Home",
+      "inStock": false
+    },
+    {
+      "id": "f3bda8ba-03ff-4028-96ca-fc96a48b8bfd",
+      "name": "Headphones",
+      "description": "Over-ear noise-cancelling headphones.",
+      "price": 79.99,
+      "category": "Electronics",
+      "inStock": true
+    },
+    {
+      "id": "469f9b38-3678-49bf-ad87-440a764e6ade",
+      "name": "Notebook",
+      "description": "A5 ruled notebook with soft cover.",
+      "price": 4.5,
+      "category": "Stationery",
+      "inStock": true
+    }
+  ]
+curl -X POST http://localhost:3000/api/products \
+     -H "Content-Type: application/json" \
+     -H "x-api-key: 12345" \
+     -d '{
+           "name": "Gaming Keyboard",
+           "description": "RGB mechanical keyboard with USB-C connection.",
+           "price": 69.99,
+           "category": "Electronics",
+           "inStock": true
+         }'
+curl -X PUT http://localhost:3000/api/products/840573f9-a3dd-45a5-9f17-9e53ee6ee101 \
+     -H "Content-Type: application/json" \
+     -H "x-api-key: 12345" \
+     -d '{
+           "name": "Wireless Mouse Pro",
+           "description": "Ergonomic wireless mouse with long battery life.",
+           "price": 29.99,
+           "category": "Electronics",
+           "inStock": true
+         }'
